@@ -28,4 +28,4 @@ require '../vendor/autoload.php';
 // var_dump($reservation) ;
 
 $officeReservation = new OfficeReservation('Réservation pou le mois mars');
-var_dump($officeReservation::$count);
+var_dump($officeReservation::getCount());

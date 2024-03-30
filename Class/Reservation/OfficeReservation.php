@@ -4,12 +4,15 @@ namespace Class\Reservation ;
 
 class OfficeReservation {
 
-    public static int $count =50;    
+    private static int $count =50;    
     public function __construct(
         public string $information
 
        ) 
+       {}
+
+       public static function getCount(): int
        {
-        
+        return self::$count;
        }
 }
