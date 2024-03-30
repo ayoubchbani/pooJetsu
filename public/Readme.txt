@@ -26,3 +26,20 @@
 
 ___________________________________________________________________________________________________________________
 
+Héritage 
+mot clé 'final' == > Pour ne pas remplacer les methode ou bien la class (stoper heritage)
+
+___________________________________________________________________________________________________________________
+Abstract : 
+
+mot clé 'abstract' ====> 
+
+1 . si on met 'abstract' dans la declaration de la class (avant le mot 'class') en stop l'instenciation donc on ne peut pas faire apres une instanciation
+    de cette classe
+
+2 . si on met 'abstract' avant la declaration d'une methode cela siginifie que on oblige à la classe enfant qui herite de déclarer cette function (forcerment de creer un function qui prend le nom de la function abstract)
+3 . Class parent donne la signature quelle doit respecter par class enfant (public , returnType(string,void,array....) , les parametres)
+
+    exemple : 
+    --------
+        abstract public function marque():string ;
