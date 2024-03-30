@@ -8,6 +8,8 @@
 //         var_dump($path);
 // });
 
+use Class\Coffe\CoffeMachine;
+use Class\Coffe\PrenuimCoffeMachine;
 use Class\Reservation\OfficeReservation;
 
 require '../vendor/autoload.php';
@@ -27,5 +29,9 @@ require '../vendor/autoload.php';
 
 // var_dump($reservation) ;
 
-$officeReservation = new OfficeReservation('Réservation pou le mois mars');
-var_dump($officeReservation::getCount());
+// $officeReservation = new OfficeReservation('Réservation pou le mois mars');
+// var_dump($officeReservation::getCount());
+
+
+$coffeMachine = new PrenuimCoffeMachine(6);
+$coffeMachine->select('espresso');
