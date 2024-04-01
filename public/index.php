@@ -8,10 +8,11 @@
 //         var_dump($path);
 // });
 
-use Class\Peugot;
-use Class\Vehicule;
+use Class\BasicPdf;
 
 require '../vendor/autoload.php';
 
-$peugot = new Peugot('peugot');
-var_dump($peugot->rouler(),$peugot->marque());
+
+$basicPdf = new BasicPdf();
+
+var_dump($basicPdf->downloadHTML());
