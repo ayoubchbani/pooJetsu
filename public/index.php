@@ -8,11 +8,22 @@
 //         var_dump($path);
 // });
 
-use Class\BasicPdf;
+use Class\Coffe\EspressoMachine;
+use Class\Coffe\IrishCoffeeMachine;
+use Class\Coffe\MultipeCoffeeMachine;
 
 require '../vendor/autoload.php';
 
 
-$basicPdf = new BasicPdf();
+$espresso = new EspressoMachine();
+$irishCoffe = new IrishCoffeeMachine();
+$multiCoffeMachine = new MultipeCoffeeMachine();
+echo '<pre>';
+var_dump(
+    // $espresso->makeEspressoCoffee(),
+    // $irishCoffe->makeIrishCoffee(),
+    $espresso->callEspresso(),
+   
 
-var_dump($basicPdf->downloadHTML());
+);
+echo '<pre>';
