@@ -3,11 +3,18 @@
 namespace Class\Users;
 class User {
 
-    private int $id;
-
-    public function __construct()
+    public function __construct(public string $username , public string $password)
     {
-        $this->id = rand();   
+    
+    }
+
+    public function isVerified():bool
+    {
+        return true ; 
+    }
+    public function isBan():bool
+    {
+        return false ; 
     }
 
 }

@@ -50,3 +50,8 @@ Interface :
 1 . les interface represente une notion tres important sur la poo et permet de realiser des contrat avec les class
 2 . les interface passe au class qu'elle doivent obligatoirement implémenter comme méthode et Elle ne fournit aucune implémentation de ces méthodes,seulement leur signature.
 3 . On ne peut pas déclarer des methode avec private ou protected toujours avec public
+
+___________________________________________________________________________________________________________________
+Les exceptions : 
+
+unUncaught -> ça veut dire que l'erreur n'as pas été catché (try .... catch)
