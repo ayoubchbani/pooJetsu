@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit567e0a3ef804fd809acbf912fa1b973b
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'Router\\' => 7,
+        ),
         'C' => 
         array (
             'Colors\\' => 7,
@@ -15,6 +19,10 @@ class ComposerStaticInit567e0a3ef804fd809acbf912fa1b973b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Router\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Router',
+        ),
         'Colors\\' => 
         array (
             0 => __DIR__ . '/..' . '/mistic100/randomcolor/src',
