@@ -1,8 +1,9 @@
 <?php
 
 
-namespace Router ; 
+namespace Router ;
 
+use Exceptions\RouteNotFoundException;
 
 class Router 
 {
@@ -12,7 +13,12 @@ class Router
         $this->routes[$path] = $action;
     }
 
-    public function run(){
-        
+    public function run(string $uri):mixed{
+        $path = explode('?',$uri)[0];
+        $action  = $this->routes[$path] ?? null ; 
+        if(!is_callable($action)){
+            throw new RouteNotFoundException();
+        }
+        return $action();
     }
 }
