@@ -8,13 +8,13 @@ require './../vendor/autoload.php';
 $route = new Router();
 
 
-
-$route->register('/',function(){
-    return 'HomePage' ;
-});
-$route->register('/contact',function(){
-    return 'ContactPage' ;
-});
+$route->register('/',['Controllers\HomeController','index']);
+// $route->register('/',function(){
+//     return 'HomePage' ;
+// });
+// $route->register('/contact',function(){
+//     return 'ContactPage' ;
+// });
 
 try {
  echo $route->run($_SERVER['REQUEST_URI']);
