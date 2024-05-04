@@ -2,13 +2,14 @@
 
 namespace Controllers;
 
-
+use Source\Render;
 
 class HomeController {
 
-    public function index(){
+    public function index() :Render{
 
-        return 'HomePage';
+        return Render::make('home/index');
+        ;
     }
 
 }

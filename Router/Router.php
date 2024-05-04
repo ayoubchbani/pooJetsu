@@ -26,9 +26,6 @@ class Router
                 return call_user_func_array([$class,$method],[]);
 
             }
-            echo '<pre>';
-            var_dump($action);
-            echo '<pre>';
         }
         throw new RouteNotFoundException();
     }
