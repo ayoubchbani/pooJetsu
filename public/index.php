@@ -2,13 +2,14 @@
 
 use Exceptions\RouteNotFoundException;
 use Router\Router;
+use Source\App;
 
 require './../vendor/autoload.php';
 
-$route = new Router();
+$router = new Router();
 
 define('BASE_VIEW_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'views'. DIRECTORY_SEPARATOR);
-$route->register('/',['Controllers\HomeController','index']);
+$router->register('/',['Controllers\HomeController','index']);
 // $route->register('/',function(){
 //     return 'HomePage' ;
 // });
@@ -16,9 +17,5 @@ $route->register('/',['Controllers\HomeController','index']);
 //     return 'ContactPage' ;
 // });
 
-try {
- echo $route->run($_SERVER['REQUEST_URI']);
-} catch (RouteNotFoundException $e) {
-   echo $e->getMessage() ;
-}
+(new App($router,$_SERVER['REQUEST_URI']))->run();
 echo '<pre>';
